@@ -1,0 +1,6 @@
+# Allow all search engines to crawl the entire site.
+User-agent: *
+Disallow:
+
+# Provide the location of the sitemap file to search engines.
+Sitemap: http://pdfkitpro.xyz/sitemap.xml
