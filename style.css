@@ -1,286 +1,77 @@
-/* ===========================
-   Base Reset & Layout
-=========================== */
-* {
+body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: #F7FAFC;
+    color: #4A5568;
 }
 
-body {
-    font-family: var(--font-main, 'Inter', sans-serif);
-    background-color: var(--bg-main);
-    color: var(--text-color);
-    transition: background-color var(--transition-speed), color var(--transition-speed);
-}
-
-/* ===========================
-   Navbar
-=========================== */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--bg-navbar);
-    padding: 1rem 2rem;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
-
-.logo-icon {
-    font-size: 1.5rem;
-    margin-right: 0.5rem;
-}
-
-.logo-text {
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-.nav-links {
-    display: flex;
-    gap: 1rem;
-}
-
-.nav-link {
-    color: var(--text-color);
-    text-decoration: none;
-    transition: color var(--transition-speed);
-}
-
-.nav-link:hover {
-    color: var(--accent-cyan);
-}
-
-.theme-switcher {
-    margin-left: 1rem;
-    color: var(--text-color);
-}
-
-.hamburger-menu {
-    display: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-/* ===========================
-   Sidebar
-=========================== */
-.sidebar {
-    width: 240px;
-    background-color: var(--bg-sidebar);
-    padding: 1rem;
-    overflow-y: auto;
-}
-
-.sidebar h3, .sidebar h4 {
-    margin-bottom: 0.5rem;
-    color: var(--accent-cyan);
-}
-
-.sidebar-nav ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.sidebar-nav li {
-    margin: 0.4rem 0;
-}
-
-.sidebar-nav a {
-    color: var(--text-color);
-    text-decoration: none;
-    transition: color var(--transition-speed);
-}
-
-.sidebar-nav a:hover {
-    color: var(--accent-cyan);
-}
-
-/* ===========================
-   Main Content
-=========================== */
-.main-container {
-    display: flex;
-    min-height: 100vh;
-}
-
-.content-area {
-    flex: 1;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 2rem;
 }
 
-.hero-section {
+.header {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #E2E8F0;
+    padding: 2rem 0;
     text-align: center;
-    margin: 2rem 0;
 }
 
-.cta-button {
-    padding: 0.8rem 1.5rem;
-    margin-top: 1rem;
-    background-color: var(--button-bg);
-    border: none;
-    color: var(--text-color);
-    cursor: pointer;
-    border-radius: 8px;
-    transition: background-color var(--transition-speed);
+.header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: #5A67D8;
 }
 
-.cta-button:hover {
-    background-color: var(--button-hover-bg);
+.header p {
+    font-size: 1.25rem;
+    color: #718096;
 }
 
-/* ===========================
-   Footer
-=========================== */
-.footer {
-    background-color: var(--bg-navbar);
-    padding: 1rem;
+.main-content {
+    padding-top: 3rem;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.tool-card {
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 2rem;
     text-align: center;
-    color: var(--text-color);
-}
-
-.footer-links a {
-    color: var(--text-color);
-    margin: 0 0.5rem;
     text-decoration: none;
-}
-
-.footer-links a:hover {
-    color: var(--accent-cyan);
-}
-
-.social-icons a {
-    color: var(--text-color);
-    margin: 0 0.5rem;
-    transition: color var(--transition-speed);
-}
-
-.social-icons a:hover {
-    color: var(--accent-cyan);
-}
-
-/* ===========================
-   Modal
-=========================== */
-.modal {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background-color: rgba(0,0,0,0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
 }
 
-.modal-content {
-    background-color: var(--card-bg);
-    padding: 2rem;
-    border-radius: 12px;
-    width: 90%;
-    max-width: 600px;
-    color: var(--text-color);
-    box-shadow: 0 4px 10px rgba(var(--glow-shadow-rgb), 0.3);
+.tool-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
 }
 
-.close-button {
-    float: right;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-/* ===========================
-   File Upload
-=========================== */
-.file-upload-area {
-    border: 2px dashed var(--accent-cyan);
-    border-radius: 12px;
-    padding: 2rem;
-    text-align: center;
+.tool-icon {
+    font-size: 3rem;
+    color: #5A67D8;
     margin-bottom: 1rem;
-    transition: border-color var(--transition-speed);
 }
 
-.file-upload-area:hover {
-    border-color: var(--accent-dark-cyan);
+.tool-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #4A5568;
 }
 
-.upload-button {
-    margin-top: 1rem;
-    padding: 0.6rem 1.2rem;
-    border: none;
-    border-radius: 8px;
-    background-color: var(--button-bg);
-    color: var(--text-color);
-    cursor: pointer;
-    transition: background-color var(--transition-speed);
-}
-
-.upload-button:hover {
-    background-color: var(--button-hover-bg);
-}
-
-#fileInput {
-    display: none;
-}
-
-/* ===========================
-   Themes
-=========================== */
-
-/* Default (Cyan Glow) */
-body.theme-default {
-    --bg-main: #0a0f0f;
-    --bg-navbar: #111820;
-    --bg-sidebar: #111820;
-    --text-color: #e6ffff;
-    --accent-cyan: #00ffff;
-    --accent-dark-cyan: #00cccc;
-    --glow-shadow-rgb: 0, 255, 255;
-    --card-bg: #1a242f;
-    --button-bg: #111820;
-    --button-hover-bg: #1f2d3a;
-    --font-main: 'Inter', sans-serif;
-    --transition-speed: 0.3s ease;
-}
-
-/* Sunset (Warm Orange-Pink) */
-body.theme-sunset {
-    --bg-main: #1a0f0a;
-    --bg-navbar: #33110d;
-    --bg-sidebar: #2b0d0a;
-    --text-color: #f3e8e3;
-    --accent-cyan: #ff7e5f;
-    --accent-dark-cyan: #ff4500;
-    --glow-shadow-rgb: 255, 126, 95;
-    --card-bg: #2d1a15;
-    --button-bg: #33110d;
-    --button-hover-bg: #441a11;
-}
-
-/* Forest (Emerald Green) */
-body.theme-forest {
-    --bg-main: #0a0f0a;
-    --bg-navbar: #142e1a;
-    --bg-sidebar: #142e1a;
-    --text-color: #e6ffe9;
-    --accent-cyan: #00ff88;
-    --accent-dark-cyan: #00cc66;
-    --glow-shadow-rgb: 0, 255, 136;
-    --card-bg: #1a3320;
-    --button-bg: #0d2614;
-    --button-hover-bg: #164d2b;
-}
-
-/* Light (Clean UI) */
-body.theme-light {
-    --bg-main: #f9f9f9;
-    --bg-navbar: #ffffff;
-    --bg-sidebar: #f0f0f0;
-    --text-color: #222222;
-    --accent-cyan: #0077ff;
-    --accent-dark-cyan: #0055aa;
-    --glow-shadow-rgb: 0, 119, 255;
-    --card-bg: #ffffff;
-    --button-bg: #e0e0e0;
-    --button-hover-bg: #d0d0d0;
+.tool-card p {
+    font-size: 1rem;
+    color: #718096;
 }
