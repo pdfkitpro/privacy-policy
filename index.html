@@ -21,18 +21,17 @@
             <a href="#about" class="nav-link">About</a>
             <a href="#contact" class="nav-link">Contact</a>
         </nav>
-        <div class="navbar-actions">
-            <!-- Theme Switcher -->
-            <select id="themeSwitcher" class="theme-switcher">
-                <option value="default">⚡ Default (Cyan)</option>
-                <option value="sunset">🌅 Warm Sunset</option>
-                <option value="forest">🌿 Emerald Forest</option>
-                <option value="light">☀️ Light Mode</option>
+        <div class="theme-switcher">
+            <label for="themeSwitcher">Theme:</label>
+            <select id="themeSwitcher">
+                <option value="default">Default</option>
+                <option value="sunset">Sunset</option>
+                <option value="forest">Forest</option>
+                <option value="light">Light</option>
             </select>
-            <!-- Hamburger -->
-            <div class="hamburger-menu">
-                <i class="fas fa-bars"></i>
-            </div>
+        </div>
+        <div class="hamburger-menu">
+            <i class="fas fa-bars"></i>
         </div>
     </header>
 
@@ -109,7 +108,7 @@
                 <div class="file-upload-area" id="fileUploadArea">
                     <p>Drag & Drop your files here or</p>
                     <button class="upload-button"><i class="fas fa-upload"></i> Browse Files</button>
-                    <input type="file" id="fileInput" multiple accept=".pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx,.jpg,.jpeg,.png">
+                    <input type="file" id="fileInput" accept="image/*,video/*,application/pdf" capture="environment">
                 </div>
                 <div class="processing-status" id="processingStatus">
                     <div class="spinner"></div>
@@ -124,8 +123,9 @@
     </div>
 
     <script src="Script.js"></script>
+
+    <!-- Theme switcher script -->
     <script>
-        // Theme Switcher Logic
         const themeSwitcher = document.getElementById("themeSwitcher");
         const body = document.body;
 
