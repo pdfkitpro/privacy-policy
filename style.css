@@ -75,3 +75,81 @@ body {
     font-size: 1rem;
     color: #718096;
 }
+
+/* Styles for tool pages like merge.html */
+.tool-section {
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upload-area {
+    border: 2px dashed #CBD5E0;
+    border-radius: 12px;
+    padding: 3rem;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.upload-area:hover {
+    border-color: #5A67D8;
+}
+
+.upload-area i {
+    font-size: 4rem;
+    color: #A0AEC0;
+}
+
+.main-btn {
+    background-color: #5A67D8;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.main-btn:hover {
+    background-color: #434190;
+}
+
+.file-list {
+    margin-top: 2rem;
+    width: 100%;
+    text-align: left;
+}
+
+.file-item {
+    background-color: #E2E8F0;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+.action-buttons {
+    margin-top: 2rem;
+    text-align: center;
+    width: 100%;
+}
+
+#download-link {
+    display: inline-block;
+    margin-top: 1rem;
+    text-decoration: none;
+    color: #5A67D8;
+    font-weight: bold;
+}
+
+.status-message {
+    margin-top: 1rem;
+    color: #718096;
+}
