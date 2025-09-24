@@ -3,143 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDF WIZARD - Your All-in-One PDF Solution</title>
+    <title>My PDF Tools</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body class="theme-default">
-    <header class="navbar">
-        <div class="navbar-brand">
-            <div class="logo-icon">⚡</div> 
-            <span class="logo-text">PDF WIZARD</span>
-        </div>
-        <nav class="nav-links">
-            <a href="#home" class="nav-link">Home</a>
-            <a href="#tools-grid" class="nav-link">Tools</a>
-            <a href="#about" class="nav-link">About</a>
-            <a href="#contact" class="nav-link">Contact</a>
-        </nav>
-        <div class="theme-switcher">
-            <label for="themeSwitcher">Theme:</label>
-            <select id="themeSwitcher">
-                <option value="default">Default</option>
-                <option value="sunset">Sunset</option>
-                <option value="forest">Forest</option>
-                <option value="light">Light</option>
-            </select>
-        </div>
-        <div class="hamburger-menu">
-            <i class="fas fa-bars"></i>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>My PDF Tools</h1>
+            <p>Simple and powerful tools for all your PDF needs.</p>
         </div>
     </header>
 
-    <div class="main-container">
-        <aside class="sidebar">
-            <div class="sidebar-header">
-                <h3>Tools</h3>
-            </div>
-            <nav class="sidebar-nav">
-                <div class="tool-section">
-                    <h4><i class="fas fa-file-pdf"></i> PDF Tools</h4>
-                    <ul>
-                        <li><a href="#" data-tool="merge-pdf"><i class="fas fa-compress-arrows-alt"></i> Merge PDF</a></li>
-                        <li><a href="#" data-tool="add-page-numbers"><i class="fas fa-list-ol"></i> Add Page Numbers</a></li>
-                        <li><a href="#" data-tool="compress-pdf"><i class="fas fa-file-archive"></i> Compress PDF</a></li>
-                        <li><a href="#" data-tool="pdf-to-word"><i class="fas fa-file-word"></i> PDF to Word</a></li>
-                        <li><a href="#" data-tool="word-to-pdf"><i class="fas fa-file-word"></i> Word to PDF</a></li>
-                        <li><a href="#" data-tool="pdf-to-powerpoint"><i class="fas fa-file-powerpoint"></i> PDF to PowerPoint</a></li>
-                        <li><a href="#" data-tool="powerpoint-to-pdf"><i class="fas fa-file-powerpoint"></i> PowerPoint to PDF</a></li>
-                        <li><a href="#" data-tool="pdf-to-excel"><i class="fas fa-file-excel"></i> PDF to Excel</a></li>
-                        <li><a href="#" data-tool="excel-to-pdf"><i class="fas fa-file-excel"></i> Excel to PDF</a></li>
-                        <li><a href="#" data-tool="pdf-to-jpg"><i class="fas fa-file-image"></i> PDF to JPG</a></li>
-                        <li><a href="#" data-tool="jpg-to-pdf"><i class="fas fa-file-image"></i> JPG to PDF</a></li>
-                        <li><a href="#" data-tool="add-watermark"><i class="fas fa-tint"></i> Add Watermark</a></li>
-                        <li><a href="#" data-tool="edit-pdf"><i class="fas fa-edit"></i> Edit PDF</a></li>
-                        <li><a href="#" data-tool="rotate-pdf"><i class="fas fa-rotate"></i> Rotate PDF</a></li>
-                        <li><a href="#" data-tool="unlock-pdf"><i class="fas fa-unlock"></i> Unlock PDF</a></li>
-                        <li><a href="#" data-tool="protect-pdf"><i class="fas fa-lock"></i> Protect PDF</a></li>
-                        <li><a href="#" data-tool="split-pdf"><i class="fas fa-columns"></i> Split PDF</a></li>
-                        <li><a href="#" data-tool="organize-pdf"><i class="fas fa-sitemap"></i> Organize PDF</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </aside>
+    <main class="main-content container">
+        <section class="tools-grid">
+            <a href="merge.html" class="tool-card">
+                <div class="tool-icon"><i class="fas fa-file-merge"></i></div>
+                <h3>Merge PDF</h3>
+                <p>Combine multiple PDF files into one.</p>
+            </a>
+            
+            <a href="#" class="tool-card">
+                <div class="tool-icon"><i class="fas fa-compress-alt"></i></div>
+                <h3>Compress PDF</h3>
+                <p>Reduce the size of your PDF file.</p>
+            </a>
 
-        <main class="content-area">
-            <section class="hero-section" id="home">
-                <h1>Unleash the Power of Your PDFs</h1>
-                <p>Effortlessly manage, convert, and secure your documents with our intuitive and powerful tools.</p>
-                <button class="cta-button">Get Started Now <i class="fas fa-arrow-right"></i></button>
-            </section>
+            <a href="#" class="tool-card">
+                <div class="tool-icon"><i class="fas fa-file-split"></i></div>
+                <h3>Split PDF</h3>
+                <p>Extract specific pages or a range.</p>
+            </a>
+            
+            <a href="#" class="tool-card">
+                <div class="tool-icon"><i class="fas fa-unlock"></i></div>
+                <h3>Unlock PDF</h3>
+                <p>Remove password protection from PDF.</p>
+            </a>
 
-            <section class="tools-grid" id="tools-grid">
-                <!-- Tool cards will be dynamically loaded here by JavaScript -->
-            </section>
-        </main>
-    </div>
+            <a href="#" class="tool-card">
+                <div class="tool-icon"><i class="fas fa-lock"></i></div>
+                <h3>Protect PDF</h3>
+                <p>Add a password to secure your PDF.</p>
+            </a>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <p>© 2025 Boxput. All Rights Reserved.</p>
-            <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <span>|</span>
-                <a href="#">Terms</a>
-                <span>|</span>
-                <a href="#">Contact</a>
-            </div>
-            <div class="social-icons">
-                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
-            </div>
-        </div>
-    </footer>
+            <a href="#" class="tool-card">
+                <div class="tool-icon"><i class="fas fa-rotate"></i></div>
+                <h3>Rotate PDF</h3>
+                <p>Rotate pages in your PDF document.</p>
+            </a>
 
-    <!-- Modal Structure -->
-    <div id="toolModal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h2 id="modalTitle"></h2>
-            <div id="modalBody">
-                <div class="file-upload-area" id="fileUploadArea">
-                    <p>Drag & Drop your files here or</p>
-                    <button class="upload-button"><i class="fas fa-upload"></i> Browse Files</button>
-                    <input 
-  id="fileInput" 
-  type="file"
-  accept="image/*,video/*,application/pdf,
-          .doc,.docx,.ppt,.pptx,.xls,.xlsx"
-  capture="environment"
-  multiple
->
-                </div>
-                <div class="processing-status" id="processingStatus">
-                    <div class="spinner"></div>
-                    <p id="statusText">Uploading...</p>
-                </div>
-                <div class="preview-area" id="previewArea"></div>
-                <div class="tool-options" id="toolOptions"></div>
-                <button class="process-button" id="processButton">Process</button>
-                <button class="download-button" id="downloadButton" style="display:none;">Download Result</button>
-            </div>
-        </div>
-    </div>
+            <a href="#" class="tool-card">
+                <div class="tool-icon"><i class="fas fa-file-arrow-up"></i></div>
+                <h3>PDF to Word</h3>
+                <p>Convert your PDF files to DOCX.</p>
+            </a>
 
-    <script src="Script.js"></script>
+            <a href="#" class="tool-card">
+                <div class="tool-icon"><i class="fas fa-file-image"></i></div>
+                <h3>PDF to JPG</h3>
+                <p>Convert each PDF page to a JPG image.</p>
+            </a>
 
-    <!-- Theme switcher script -->
-    <script>
-        const themeSwitcher = document.getElementById("themeSwitcher");
-        const body = document.body;
+            <a href="#" class="tool-card">
+                <div class="tool-icon"><i class="fas fa-file-powerpoint"></i></div>
+                <h3>PDF to PPT</h3>
+                <p>Convert your PDF files to PPTX.</p>
+            </a>
+            
+            <a href="#" class="tool-card">
+                <div class="tool-icon"><i class="fas fa-file-excel"></i></div>
+                <h3>PDF to Excel</h3>
+                <p>Convert your PDF tables to XLSX.</p>
+            </a>
 
-        themeSwitcher.addEventListener("change", (e) => {
-            body.className = "";
-            body.classList.add("theme-" + e.target.value);
-        });
-    </script>
+            <a href="#" class="tool-card">
+                <div class="tool-icon"><i class="fas fa-paint-roller"></i></div>
+                <h3>Edit PDF</h3>
+                <p>Add text, images, and shapes to your PDF.</p>
+            </a>
+
+            <a href="#" class="tool-card">
+                <div class="tool-icon"><i class="fas fa-file-signature"></i></div>
+                <h3>Sign PDF</h3>
+                <p>Digitally sign your PDF documents.</p>
+            </a>
+        </section>
+    </main>
 </body>
 </html>
