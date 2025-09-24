@@ -2,7 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Select all the tool cards
     const toolCards = document.querySelectorAll('.tool-card');
 
-    // Add a click event listener to each card
+   
+ // Add a click event listener to each card
     toolCards.forEach(card => {
         card.addEventListener('click', (event) => {
             // Prevent the default link behavior
