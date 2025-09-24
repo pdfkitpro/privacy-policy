@@ -108,7 +108,14 @@
                 <div class="file-upload-area" id="fileUploadArea">
                     <p>Drag & Drop your files here or</p>
                     <button class="upload-button"><i class="fas fa-upload"></i> Browse Files</button>
-                    <input type="file" id="fileInput" accept="image/*,video/*,application/pdf" capture="environment">
+                    <input 
+  id="fileInput" 
+  type="file"
+  accept="image/*,video/*,application/pdf,
+          .doc,.docx,.ppt,.pptx,.xls,.xlsx"
+  capture="environment"
+  multiple
+>
                 </div>
                 <div class="processing-status" id="processingStatus">
                     <div class="spinner"></div>
