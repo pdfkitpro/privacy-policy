@@ -9,7 +9,7 @@
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
+<body class="theme-default">
     <header class="navbar">
         <div class="navbar-brand">
             <div class="logo-icon">⚡</div> 
@@ -21,8 +21,18 @@
             <a href="#about" class="nav-link">About</a>
             <a href="#contact" class="nav-link">Contact</a>
         </nav>
-        <div class="hamburger-menu">
-            <i class="fas fa-bars"></i>
+        <div class="navbar-actions">
+            <!-- Theme Switcher -->
+            <select id="themeSwitcher" class="theme-switcher">
+                <option value="default">⚡ Default (Cyan)</option>
+                <option value="sunset">🌅 Warm Sunset</option>
+                <option value="forest">🌿 Emerald Forest</option>
+                <option value="light">☀️ Light Mode</option>
+            </select>
+            <!-- Hamburger -->
+            <div class="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
     </header>
 
@@ -52,10 +62,9 @@
                         <li><a href="#" data-tool="unlock-pdf"><i class="fas fa-unlock"></i> Unlock PDF</a></li>
                         <li><a href="#" data-tool="protect-pdf"><i class="fas fa-lock"></i> Protect PDF</a></li>
                         <li><a href="#" data-tool="split-pdf"><i class="fas fa-columns"></i> Split PDF</a></li>
-                        <li><a href="#" data-tool="organize-pdf"><i class="fas fa-Sitemap"></i> Organize PDF</a></li>
+                        <li><a href="#" data-tool="organize-pdf"><i class="fas fa-sitemap"></i> Organize PDF</a></li>
                     </ul>
                 </div>
-                <!-- Add more tool sections here if needed, e.g., Image Tools, Text Tools -->
             </nav>
         </aside>
 
@@ -91,13 +100,12 @@
         </div>
     </footer>
 
-    <!-- Modal Structure (hidden by default) -->
+    <!-- Modal Structure -->
     <div id="toolModal" class="modal">
         <div class="modal-content">
             <span class="close-button">&times;</span>
             <h2 id="modalTitle"></h2>
             <div id="modalBody">
-                <!-- File upload and tool-specific UI will go here -->
                 <div class="file-upload-area" id="fileUploadArea">
                     <p>Drag & Drop your files here or</p>
                     <button class="upload-button"><i class="fas fa-upload"></i> Browse Files</button>
@@ -107,12 +115,8 @@
                     <div class="spinner"></div>
                     <p id="statusText">Uploading...</p>
                 </div>
-                <div class="preview-area" id="previewArea">
-                    <!-- Preview content like canvas or image will be shown here -->
-                </div>
-                <div class="tool-options" id="toolOptions">
-                    <!-- Tool specific options (e.g., page numbers, watermark text) -->
-                </div>
+                <div class="preview-area" id="previewArea"></div>
+                <div class="tool-options" id="toolOptions"></div>
                 <button class="process-button" id="processButton">Process</button>
                 <button class="download-button" id="downloadButton" style="display:none;">Download Result</button>
             </div>
@@ -120,5 +124,15 @@
     </div>
 
     <script src="Script.js"></script>
+    <script>
+        // Theme Switcher Logic
+        const themeSwitcher = document.getElementById("themeSwitcher");
+        const body = document.body;
+
+        themeSwitcher.addEventListener("change", (e) => {
+            body.className = "";
+            body.classList.add("theme-" + e.target.value);
+        });
+    </script>
 </body>
 </html>
