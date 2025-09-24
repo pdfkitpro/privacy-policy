@@ -3,95 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My PDF Tools</title>
+    <title>PDF Wizard - Your Go-To Online PDF Tools</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Font Awesome for Icons (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 <body>
     <header class="header">
         <div class="container">
-            <h1>My PDF Tools</h1>
-            <p>Simple and powerful tools for all your PDF needs.</p>
+            <a href="#" class="logo">
+                <i class="fas fa-magic-wand-sparkles"></i> PDF Wizard
+            </a>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#tools">All Tools</a></li>
+                    <li><a href="#">Log In</a></li>
+                    <li><a href="#" class="btn btn-secondary">Sign Up</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <main class="main-content container">
-        <section class="tools-grid">
-            <a href="merge.html" class="tool-card">
-                <div class="tool-icon"><i class="fas fa-file-merge"></i></div>
-                <h3>Merge PDF</h3>
-                <p>Combine multiple PDF files into one.</p>
-            </a>
-            
-            <a href="#" class="tool-card">
-                <div class="tool-icon"><i class="fas fa-compress-alt"></i></div>
-                <h3>Compress PDF</h3>
-                <p>Reduce the size of your PDF file.</p>
-            </a>
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <h1>Every PDF tool you'll ever need.</h1>
+                <p>Edit, convert, merge, split, and compress PDFs with ease. Online, free, and fast!</p>
+                <div class="main-cta">
+                    <button class="btn btn-primary">Select PDF File</button>
+                    <p class="cta-note">or drag & drop PDF here</p>
+                </div>
+            </div>
+        </section>
 
-            <a href="#" class="tool-card">
-                <div class="tool-icon"><i class="fas fa-file-split"></i></div>
-                <h3>Split PDF</h3>
-                <p>Extract specific pages or a range.</p>
-            </a>
-            
-            <a href="#" class="tool-card">
-                <div class="tool-icon"><i class="fas fa-unlock"></i></div>
-                <h3>Unlock PDF</h3>
-                <p>Remove password protection from PDF.</p>
-            </a>
-
-            <a href="#" class="tool-card">
-                <div class="tool-icon"><i class="fas fa-lock"></i></div>
-                <h3>Protect PDF</h3>
-                <p>Add a password to secure your PDF.</p>
-            </a>
-
-            <a href="#" class="tool-card">
-                <div class="tool-icon"><i class="fas fa-rotate"></i></div>
-                <h3>Rotate PDF</h3>
-                <p>Rotate pages in your PDF document.</p>
-            </a>
-
-            <a href="#" class="tool-card">
-                <div class="tool-icon"><i class="fas fa-file-arrow-up"></i></div>
-                <h3>PDF to Word</h3>
-                <p>Convert your PDF files to DOCX.</p>
-            </a>
-
-            <a href="#" class="tool-card">
-                <div class="tool-icon"><i class="fas fa-file-image"></i></div>
-                <h3>PDF to JPG</h3>
-                <p>Convert each PDF page to a JPG image.</p>
-            </a>
-
-            <a href="#" class="tool-card">
-                <div class="tool-icon"><i class="fas fa-file-powerpoint"></i></div>
-                <h3>PDF to PPT</h3>
-                <p>Convert your PDF files to PPTX.</p>
-            </a>
-            
-            <a href="#" class="tool-card">
-                <div class="tool-icon"><i class="fas fa-file-excel"></i></div>
-                <h3>PDF to Excel</h3>
-                <p>Convert your PDF tables to XLSX.</p>
-            </a>
-
-            <a href="#" class="tool-card">
-                <div class="tool-icon"><i class="fas fa-paint-roller"></i></div>
-                <h3>Edit PDF</h3>
-                <p>Add text, images, and shapes to your PDF.</p>
-            </a>
-
-            <a href="#" class="tool-card">
-                <div class="tool-icon"><i class="fas fa-file-signature"></i></div>
-                <h3>Sign PDF</h3>
-                <p>Digitally sign your PDF documents.</p>
-            </a>
+        <section id="tools" class="tools-grid-section">
+            <div class="container">
+                <h2>Explore Our PDF Tools</h2>
+                <div class="tools-grid">
+                    <!-- Tool Card 1: Merge PDF -->
+                    <a href="#" class="tool-card">
+                        <i class="fas fa-object-group icon-merge"></i>
+                        <h3>Merge PDF</h3>
+                        <p>Combine PDFs in the order you want with the easiest PDF merger.</p>
+                    </a>
+                    <!-- Tool Card 2: Split PDF -->
+                    <a href="#" class="tool-card">
+                        <i class="fas fa-cut icon-split"></i>
+                        <h3>Split PDF</h3>
+                        <p>Separate pages or extract a specific page range into a new PDF file.</p>
+                    </a>
+                    <!-- Tool Card 3: Compress PDF -->
+                    <a href="#" class="tool-card">
+                        <i class="fas fa-file-zipper icon-compress"></i>
+                        <h3>Compress PDF</h3>
+                        <p>Reduce file size while optimizing for the best possible PDF quality.</p>
+                    </a>
+                    <!-- Tool Card 4: PDF to Word -->
+                    <a href="#" class="tool-card">
+                        <i class="fas fa-file-word icon-word"></i>
+                        <h3>PDF to Word</h3>
+                        <p>Easily convert your PDF files into editable DOC and DOCX documents.</p>
+                    </a>
+                    <!-- Tool Card 5: Word to PDF -->
+                    <a href="#" class="tool-card">
+                        <i class="fas fa-file-pdf icon-pdf"></i>
+                        <h3>Word to PDF</h3>
+                        <p>Make a PDF from a DOC or DOCX file with this high-quality converter.</p>
+                    </a>
+                     <!-- Tool Card 6: PDF to JPG -->
+                    <a href="#" class="tool-card">
+                        <i class="fas fa-file-image icon-jpg"></i>
+                        <h3>PDF to JPG</h3>
+                        <p>Convert each PDF page into a JPG or extract all images from a PDF.</p>
+                    </a>
+                     <!-- Tool Card 7: Edit PDF -->
+                    <a href="#" class="tool-card">
+                        <i class="fas fa-pen-to-square icon-edit"></i>
+                        <h3>Edit PDF</h3>
+                        <p>Add text, shapes, images, and freehand annotations to your documents.</p>
+                    </a>
+                     <!-- Tool Card 8: Protect PDF -->
+                    <a href="#" class="tool-card">
+                        <i class="fas fa-lock icon-lock"></i>
+                        <h3>Protect PDF</h3>
+                        <p>Encrypt your PDF with a password to prevent unauthorized access.</p>
+                    </a>
+                </div>
+            </div>
         </section>
     </main>
-<script src="script.js"></script>
 
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 PDF Wizard. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
