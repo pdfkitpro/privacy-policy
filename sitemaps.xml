@@ -16,7 +16,12 @@
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
-
+  <url>
+    <loc>http://pdfkitpro.xyz/app-ads.txt/</loc>
+    <lastmod>2025-09-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- 
     ADD MORE PAGES HERE 
     If you add an "About Us" page, copy one of the <url> blocks above
